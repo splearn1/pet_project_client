@@ -1,0 +1,12 @@
+<nav class="stellar-navbar">
+  <div class="brand-name">
+    <a routerLink="/">TimeLine</a>
+  </div>
+  <div class="nav-link">
+    @if (authService.isLoggedIn()) {
+      <button (click)="logout()">Logout</button>
+    }@else {
+      <a routerLink="/login">Login</a>
+    }
+  </div>
+</nav>
